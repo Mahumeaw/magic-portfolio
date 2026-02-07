@@ -150,7 +150,10 @@ export interface About extends BasePageConfig {
       timeframe: string;
       /** Role or job title */
       role: string;
+      /** Location of the company */
+      location: string;
       /** Achievements at the company */
+      /** Lo */
       achievements: React.ReactNode[];
       /** Images related to the experience */
       images?: Array<{
@@ -175,6 +178,8 @@ export interface About extends BasePageConfig {
     institutions: Array<{
       /** Institution name */
       name: string;
+      /** Timeframe of studies */
+      timeframe: string;
       /** Description of studies */
       description: React.ReactNode;
     }>;

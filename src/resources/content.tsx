@@ -13,9 +13,9 @@ const person: Person = {
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My weekly newsletter about software engineering and development</>,
 };
 
 const social: Social = [
@@ -34,22 +34,28 @@ const social: Social = [
     link: "https://linkedin.com/in/bhurinat-kan",
     essential: true,
   },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: false,
-  },
+  // {
+  //   name: "Instagram",
+  //   icon: "instagram",
+  //   link: "https://www.instagram.com/once_ui/",
+  //   essential: false,
+  // },
+  // {
+  //   name: "Threads",
+  //   icon: "threads",
+  //   link: "https://www.threads.com/@once_ui",
+  //   essential: false,
+  // },
   {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
+    essential: true,
+  },
+  {
+    name: "CV",
+    icon: "document",
+    link: "/documents/CV.pdf",
     essential: true,
   },
 ];
@@ -60,9 +66,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Bhurinat Kanchanasuwan</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -76,7 +82,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Garfield, a Software Engineering student at <Text as="span" size="xl" weight="strong">ICT Mahidol</Text>. This site where I show <br /> my experiences and my contributing. 
 </>
   ),
 };
@@ -110,10 +116,11 @@ const about: About = {
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiences",
     experiences: [
       {
         company: "KASIKORN Business-Technology Group",
+        location: "Nonthaburi, Thailand · Hybrid",
         timeframe: "March 2026 - Present",
         role: "Software Quality Assurance Engineer Intern",
         achievements: [
@@ -138,6 +145,7 @@ const about: About = {
       },
       {
         company: "Universiti Teknologi PETRONAS",
+        location: "Perak, Malaysia · Onsite",
         timeframe: "May 2025 - August 2025",
         role: "Researcher Intern",
         achievements: [
@@ -156,15 +164,19 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Educations",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Mahidol University",
+        timeframe: "2022 - June 2026 (Expected)",
+        description: <><strong>Bachelor of Science in Information and Communication Technology</strong>
+                    <br/><span className="color: #aaa">Majoring in Software Engineering</span>
+        </>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Surasakmontree School",
+        timeframe : "2016 - 2021",
+        description: <>High School Sciences and Mathematics Program</>,
       },
     ],
   },
@@ -173,9 +185,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Web Development",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Able to build responsive and interactive web applications since design, development, and deployment.</>
         ),
         tags: [
           {
@@ -210,12 +222,12 @@ const about: About = {
             icon: "javascript",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "TypeScript",
+            icon: "typescript",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Next.js",
+            icon: "nextjs",
           },
         ],
         // optional: leave the array empty if you don't want to display images

@@ -210,7 +210,7 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                    <Row fillWidth horizontal="between" vertical="end" marginBottom="2">
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
@@ -218,7 +218,10 @@ export default function About() {
                         {experience.timeframe}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                    <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="xxs">
+                      {experience.location}
+                    </Text>
+                    <Text variant="body-default-l" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
                     <Column as="ul" gap="16">
@@ -269,9 +272,14 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
+                    <Row fillWidth horizontal="between" vertical="end" marginBottom="2">
+                      <Text id={institution.name} variant="heading-strong-l">
+                        {institution.name}
+                      </Text>
+                     <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {institution.timeframe}
+                     </Text>
+                    </Row>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
