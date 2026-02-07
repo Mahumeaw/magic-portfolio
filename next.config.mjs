@@ -16,6 +16,16 @@ const nextConfig = {
         hostname: "www.google.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "smashbook.mahumeaw.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        pathname: "**",
+      },
     ],
   },
   sassOptions: {
